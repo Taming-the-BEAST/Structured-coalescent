@@ -1,6 +1,7 @@
 ---
 author: Nicola F. Müller,Tim Vaughan
 level: Professional
+title: Structured coalescent
 ---
 
 # Summary
