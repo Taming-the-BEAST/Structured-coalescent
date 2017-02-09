@@ -72,7 +72,7 @@ The packages MultiTypeTree is not implemented in the core of BEAST, but has to b
 
 To be able to make `.xml`'s for MultiTypeTree, we have to load the MultiTypeTree template `File > Template > MultiTypeTree`. This template allows to specify additional things, such as sampling location, which one can not specify using the standard interface, as well as parameters such as the migration rates.
 After setting the template, we can load the alignment of the H3N2 data `File > Add Alignment`.
-Since the sequences were sampled through time, we have to specify the sampling dates. These are included in the sequence names. To set the sampling dates, go to **Tip Dates**, guess them by splitting after the _ and then choose the last group. There are two different ways in how BEAST can interpret sampling dates. They are labeled as **Since some time in the past** and **Before the present**. The easiest way to check if you have used the correct one is by checking `Height`. If the setup is correct, the sequences sampled the most recently (i.e. 2005.66) should have a Height of 0 while all other tips should be larger then 0 (Figure [2](#fig:sampling_dates)).
+Since the sequences were sampled through time, we have to specify the sampling dates. These are included in the sequence names. To set the sampling dates, go to **Tip Dates**, guess them by splitting after the "_" and then choose the last group. There are two different ways in how BEAST can interpret sampling dates. They are labeled as **Since some time in the past** and **Before the present**. The easiest way to check if you have used the correct one is by checking `Height`. If the setup is correct, the sequences sampled the most recently (i.e. 2005.66) should have a Height of 0 while all other tips should be larger then 0 (Figure [2](#fig:sampling_dates)).
 
 <figure>
 	<a id="fig:sampling_dates"></a>
@@ -82,7 +82,7 @@ Since the sequences were sampled through time, we have to specify the sampling d
 <br>
 
 
-The main contrast in the setup to previous analyses is that we include additional information about the sampling location of sequences. Sequences were taken from patients in Hong Kong and New Zealand. We can specify these sampling locations by going to **Tip Locations** in BEAUti and guessing the locations. Use here the second group after splitting the names on the character _. After guessing the tip locations, the column **Location** should contain the entries Hong Kong and New Zealand (Figure [3](#fig:sampling_locations)).
+The main contrast in the setup to previous analyses is that we include additional information about the sampling location of sequences. Sequences were taken from patients in Hong Kong and New Zealand. We can specify these sampling locations by going to **Tip Locations** in BEAUti and guessing the locations. Use here the second group after splitting the names on the character "_". After guessing the tip locations, the column **Location** should contain the entries Hong Kong and New Zealand (Figure [3](#fig:sampling_locations)).
 
 <figure>
 	<a id="fig:sampling_locations"></a>
@@ -130,7 +130,7 @@ Figure [5](#fig:est_migrates) shows the final setup for the priors.
 
 The rest of the settings we can leave as they are.
 
-After saving, we get an `*.xml`, which we can use in BEAST2. The run will take a bit of time. If the MultiTypeTree run consumes too much CPU power, you can just close it and then use the pre-cooked `*.log` and `*.trees` files later instead.
+After saving, we get an `*.xml`, which we can use in BEAST2. The run will take a bit of time. If the MultiTypeTree run consumes too much CPU power, you can just close it and then use the "pre-cooked" `*.log` and `*.trees` files later instead.
 
 
 
