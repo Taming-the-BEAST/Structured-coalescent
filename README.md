@@ -1,6 +1,8 @@
 ---
 author: "Nicola F. Müller,Tim Vaughan"
 beastversion: 2.4.2
+tracerversion: 1.6.0
+figtreeversion: 1.4.2
 level: Professional
 subtitle: Population structure using MultiTypeTree
 title: Structured coalescent
@@ -11,24 +13,43 @@ title: Structured coalescent
 Population dynamics can influence the shape of a tree. Another thing that has strong influence on the shape of the tree is structure in a population. This is the case as soon as sequences do not mix well, i.e. they cluster together. One cause of this clustering is due to geography. Samples may not have been taken from the same geographic region, leading to clustering of samples from the same region. This clustering of samples can bias the estimation of parameters. The extension of the classic coalescent to the structured coalescent by allowing for migration between regions is trying to circumvent this by allowing individual regions to have distinct coalescent rates and by allowing migration between those regions.
 
 
+----
 
-# Programs used in this Exercise
+# Programs used in this Exercise 
 
-### BEAST - Bayesian Evolutionary Analysis Sampling Trees
+### BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2
 
-BEAST version 2.4.2 {% cite Bouckaert2014 --file Structured-coalescent/master-refs %}.
+BEAST2 ([http://www.beast2.org](http://www.beast2.org)) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v{{ page.beastversion }} {% cite BEAST2book2014 --file Structured-coalescent/master-refs %}. 
 
-### BEAUti - Bayesian Evolutionary Analysis Utility
 
-GUI to create `*.xml` for BEAST2.
+### BEAUti2 - Bayesian Evolutionary Analysis Utility
 
-### Tracer 
+BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.
 
-Tracer ([http://tree.bio.ed.ac.uk/software/tracer](http://tree.bio.ed.ac.uk/software/tracer)) is used to summarize the posterior estimates of the various parameters sampled by the Markov Chain. It includes code to analyze estimates of past population dynamics from `*.log` files and `*.trees` files. It is mainly used for visual inspection and assessment of convergence of MCMC runs. It helps to quickly view median estimate and 95% credible intervals (which approximate the 95% highest posterior density intervals) of the parameters, and calculates the effective sample sizes (ESS) of parameters. It also helps to visualize potential parameter correlations.
+Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.
 
-### TreeAnnotator 
 
-TreeAnnotator is a program that comes with BEAST2. It allows to summarize the analysis of sampled trees.
+### TreeAnnotator
+
+TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).
+
+TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.
+
+
+### Tracer
+
+Tracer ([http://tree.bio.ed.ac.uk/software/tracer](http://tree.bio.ed.ac.uk/software/tracer)) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v{{ page.tracerversion }}.
+
+
+### FigTree
+
+FigTree ([http://tree.bio.ed.ac.uk/software/figtree](http://tree.bio.ed.ac.uk/software/figtree)) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v{{ page.figtreeversion }}.
+
+----
+
+
+
+
 
 
 
@@ -226,7 +247,11 @@ Next, we would like to know how certain we are about the node heights.
 -  Despite considering structure in a tree, there might still be states or locations etc. that were not sampled. Even if a node is inferred to be in a location with high certainty, the results could look completely different if samples from other locations would be considered as well.
 
 
+----
 
+# Acknowledgment
+
+The content of this tutorial is based on the [MultiTypeTree](https://github.com/CompEvol/MultiTypeTree/wiki/Beginner's-Tutorial) tutorial by Tim Vaughan.
 
 
 # Useful Links
@@ -237,10 +262,6 @@ Next, we would like to know how certain we are about the node heights.
 -  BEAST 1 website and documentation: [http://beast.bio.ed.ac.uk](http://beast.bio.ed.ac.uk) 
 -  Join the BEAST user discussion: [http://groups.google.com/group/beast-users](http://groups.google.com/group/beast-users) 
 
-
-----
-
-The content of this tutorial is based on the [MultiTypeTree](https://github.com/CompEvol/MultiTypeTree/wiki/Beginner's-Tutorial) tutorial by Tim Vaughan.
 
 ----
 
