@@ -1,11 +1,23 @@
 ---
-author: "Nicola F. Müller,Tim Vaughan"
-beastversion: 2.7.x
+author: Nicola F. Müller,Tim Vaughan
 tracerversion: 1.7.3
 figtreeversion: 1.4.x
-level: Professional
 subtitle: Population structure using MultiTypeTree
 title: Structured coalescent
+beastversion_tutorial: 2.7.x
+workflow: Advanced analysis
+status: current
+keywords:
+- structured coalescent
+- migration
+- population structure
+- phylogeography
+packages:
+- MultiTypeTree
+domains:
+- phylogeography
+- epidemiology
+beastversion_package: '2.7'
 ---
 
 # Background
